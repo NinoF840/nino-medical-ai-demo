@@ -11,8 +11,8 @@ st.set_page_config(
 )
 
 # Title and header
-st.title("🏥 Nino Medical AI Platform - Demo")
-st.markdown("### Open-source medical AI platform for education and research")
+st.title("🏥 Nino Medical AI Demo")
+st.markdown("### Open-source educational platform for medical AI learning")
 
 # Important disclaimer
 st.error("⚠️ **IMPORTANT DISCLAIMER**: This software is for educational and research purposes only. NOT FOR CLINICAL OR DIAGNOSTIC USE.")
@@ -76,26 +76,33 @@ with st.sidebar:
     - [License](https://github.com/NinoF840/nino-medical-ai-demo/blob/main/LICENSE)
     """)
 
-# Integration Guide
-st.subheader("🛠️ Integration Guide")
-st.write("Learn more about how to integrate with our medical AI API.")
+# Educational Resources
+st.subheader("📚 Educational Resources")
+st.write("Learn about medical AI concepts and how to build similar educational tools.")
 
-with st.expander("View Integration Example"):
+with st.expander("View Learning Example"):
     st.code("""
-    # Example integration code
-    import requests
+    # Example: How to work with medical data in Python
+    import pandas as pd
+    import numpy as np
     
-    # This is a demo - not a real API
-    response = requests.get('https://api.nino-medical-ai.demo/analyze')
-    data = response.json()
-    print(data)
+    # Generate synthetic medical data for learning
+    synthetic_data = {
+        'patient_id': np.arange(1, 101),
+        'heart_rate': np.random.normal(75, 10, 100),
+        'blood_pressure_sys': np.random.normal(120, 15, 100)
+    }
+    
+    df = pd.DataFrame(synthetic_data)
+    print(df.head())
     """, language="python")
 
 # Contact information
-st.subheader("📞 Contact Us")
-st.write("For more information, partnerships, or security issues, please reach out:")
+st.subheader("📞 Contact & Community")
+st.write("For educational collaborations, research partnerships, or security issues:")
 st.write("📧 **Email**: nino58150@gmail.com")
 st.write("👥 **Community**: [GitHub Discussions](https://github.com/NinoF840/nino-medical-ai-demo/discussions)")
+st.write("🔬 **Research**: This platform is available for academic research and educational use")
 
 # Footer
 st.divider()
