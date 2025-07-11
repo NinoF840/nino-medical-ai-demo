@@ -1,0 +1,167 @@
+NORMATIVE COMPLIANCE GUIDE FOR MEDICAL AI SYSTEMS
+
+=== REGULATORY FRAMEWORKS ===
+
+1. **EU AI ACT (2024)**
+   - Classification: High-risk AI system (medical use)
+   - Requirements: Risk management, data governance, transparency
+   - Status: ⚠️ Needs compliance documentation
+
+2. **GDPR (General Data Protection Regulation)**
+   - Scope: Health data processing (special category)
+   - Requirements: Consent, data subject rights, privacy by design
+   - Status: ⚠️ Partially compliant (synthetic data only)
+
+3. **MDR (Medical Device Regulation) - EU 2017/745**
+   - Scope: Medical devices including AI software
+   - Requirements: CE marking, clinical evaluation, post-market surveillance
+   - Status: ❌ Not addressed
+
+4. **FDA 21 CFR Part 820 (US)**
+   - Scope: Medical device quality system
+   - Requirements: Design controls, risk management, validation
+   - Status: ❌ Not addressed (if targeting US market)
+
+=== MEDICAL STANDARDS ===
+
+5. **ISO 13485 - Medical Device Quality Management**
+   - Requirements: Quality management system for medical devices
+   - Status: ❌ Not implemented
+
+6. **ISO 14971 - Medical Device Risk Management**
+   - Requirements: Risk analysis, risk evaluation, risk control
+   - Status: ❌ Not implemented
+
+7. **IEC 62304 - Medical Device Software Lifecycle**
+   - Requirements: Software development lifecycle for medical devices
+   - Status: ❌ Not implemented
+
+8. **ISO 27001 - Information Security Management**
+   - Requirements: Information security for health data
+   - Status: ❌ Not implemented
+
+=== HEALTHCARE SPECIFIC ===
+
+9. **HIPAA (US Healthcare)**
+   - Scope: Protected health information (PHI)
+   - Requirements: Administrative, physical, technical safeguards
+   - Status: ❌ Not addressed (if handling US patient data)
+
+10. **HITECH Act (US)**
+    - Scope: Health information technology security
+    - Requirements: Breach notification, audit controls
+    - Status: ❌ Not addressed
+
+11. **FDA Software as Medical Device (SaMD) Guidance**
+    - Requirements: Clinical evaluation, quality management
+    - Status: ❌ Not addressed
+
+=== CYBERSECURITY ===
+
+12. **NIS2 Directive (EU)**
+    - Scope: Network and information security
+    - Requirements: Cybersecurity measures, incident reporting
+    - Status: ❌ Not addressed
+
+13. **ISO 27799 - Health Informatics Security**
+    - Requirements: Information security in health organizations
+    - Status: ❌ Not implemented
+
+=== ETHICAL FRAMEWORKS ===
+
+14. **IEEE 2857 - Ethical AI Design**
+    - Requirements: Ethical considerations in AI systems
+    - Status: ❌ Not addressed
+
+15. **WHO Ethics Guidelines for AI in Health**
+    - Requirements: Human rights, autonomy, transparency
+    - Status: ❌ Not addressed
+
+=== INTEROPERABILITY ===
+
+16. **HL7 FHIR (Healthcare Data Exchange)**
+    - Requirements: Standardized health data formats
+    - Status: ❌ Not implemented
+
+17. **DICOM (Medical Imaging)**
+    - Requirements: Medical imaging data standards
+    - Status: ❌ Not applicable (no imaging)
+
+=== NATIONAL REGULATIONS ===
+
+18. **Country-Specific Requirements**
+    - France: CNIL guidelines for AI
+    - Germany: DSGVO + medical device laws
+    - UK: MHRA guidance for AI/ML medical devices
+    - Status: ❌ Not addressed
+
+=== PRIORITY ACTIONS ===
+
+**IMMEDIATE (High Priority):**
+1. Create risk assessment documentation (ISO 14971)
+2. Implement GDPR compliance measures
+3. Add AI Act transparency requirements
+4. Establish quality management system basics
+
+**SHORT-TERM (Medium Priority):**
+1. Conduct clinical validation planning
+2. Implement cybersecurity measures (ISO 27001)
+3. Create software development lifecycle documentation
+4. Add ethical AI considerations
+
+**LONG-TERM (Before Production):**
+1. Obtain CE marking (MDR compliance)
+2. Complete clinical evaluation
+3. Implement post-market surveillance
+4. Establish regulatory submission strategy
+
+=== COMPLIANCE ROADMAP ===
+
+**Phase 1: Foundation (Weeks 1-4)**
+- Risk assessment
+- Privacy policy and GDPR compliance
+- Basic security measures
+- Documentation structure
+
+**Phase 2: Technical Implementation (Weeks 5-12)**
+- Quality management system
+- Software development lifecycle
+- Cybersecurity implementation
+- Ethical AI framework
+
+**Phase 3: Regulatory Preparation (Weeks 13-24)**
+- Clinical evaluation planning
+- Regulatory strategy
+- Compliance audits
+- Certification preparation
+
+**Phase 4: Market Entry (Weeks 25-52)**
+- Regulatory submissions
+- Post-market surveillance setup
+- Continuous compliance monitoring
+- Market-specific adaptations
+
+=== COST CONSIDERATIONS ===
+
+**Compliance Costs:**
+- Legal/regulatory consulting: €50,000-200,000
+- Technical implementation: €100,000-500,000
+- Certification and testing: €25,000-100,000
+- Ongoing compliance: €20,000-50,000/year
+
+**Resources Needed:**
+- Regulatory affairs specialist
+- Quality assurance manager
+- Cybersecurity expert
+- Clinical validation partner
+- Legal counsel
+
+=== NEXT STEPS ===
+
+1. Prioritize target markets (EU, US, others)
+2. Engage regulatory consultants
+3. Develop compliance timeline
+4. Allocate budget and resources
+5. Begin with high-priority items
+
+Contact regulatory experts for detailed guidance on your specific use case and target markets.

@@ -1,0 +1,27 @@
+AI Act Summary
+
+1. **Overview**
+   - The AI Act is a regulatory framework from the EU that governs artificial intelligence systems.
+   - Its goal is to ensure AI is safe, trustworthy, and respects human rights.
+
+2. **Classification**
+   - High-risk AI systems, like those in healthcare, require strict compliance.
+   - Low-risk AI, such as chatbots, require minimal oversight.
+
+3. **Compliance Requirements**
+   - **Risk Management**: Assess and mitigate risks related to AI systems.
+   - **Data Governance**: Ensure data quality and minimize bias.
+   - **Transparency**: Provide users with clear information about the AI system.
+   - **Human Oversight**: Implement mechanisms for human intervention.
+   - **Security and Accuracy**: Maintain performance and prevent unauthorized access.
+
+4. **Actions**
+   - Documentation for risk assessment, data handling, and transparency.
+   - Technical safeguards for data validation and AI decision-making.
+   - Regular audits and updates to certification as per legislative changes.
+
+5. **Benefits**
+   - Enhances trust in AI technologies.
+   - Protects users and society from potential harms of AI misuse.
+
+For more detailed guidance, consider consulting legal experts or reviewing official EU documentation on the AI Act.
