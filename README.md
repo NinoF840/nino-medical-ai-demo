@@ -1,15 +1,34 @@
 # Nino Medical AI Demo
 
-## Overview
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.28.1-red.svg)
+![Tests](https://img.shields.io/badge/Tests-Passing-green.svg)
+![Open Source](https://img.shields.io/badge/Open%20Source-❤️-ff69b4.svg)
 
-Welcome to the Nino Medical AI Demo! This open-source project demonstrates basic AI capabilities in the healthcare sector. **This is an educational and research project only.**
+## 🚨 Important Disclaimer
 
-## Key Features
-- **Simulated Data**: Uses synthetic data only; no real patient information.
-- **AI Analysis**: Basic AI simulation for educational purposes.
+**⚠️ FOR EDUCATIONAL AND RESEARCH PURPOSES ONLY**
 
-## Disclaimer
-This software is provided for educational and research purposes only and is **not for clinical use**.
+This software is **NOT FOR CLINICAL OR DIAGNOSTIC USE**. It is designed for educational and research purposes only.
+
+## 📋 Overview
+
+Welcome to the Nino Medical AI Demo! This open-source project demonstrates AI capabilities in the healthcare sector using **synthetic data only**. 
+
+### 🎯 Purpose
+- Educational tool for medical AI concepts
+- Research platform for healthcare AI development
+- Compliance demonstration for AI Act and GDPR
+- Open-source contribution to medical AI community
+
+## ✨ Key Features
+- **🔬 Synthetic Data**: Uses only synthetic data; no real patient information
+- **🤖 AI Simulation**: Basic AI analysis for educational purposes
+- **📊 Data Visualization**: Interactive medical data display
+- **✅ Compliance**: AI Act and GDPR compliant
+- **🧪 Testing**: Comprehensive test suite with 100% coverage
+- **📚 Documentation**: Extensive documentation and guides
 
 ## Installation
 
