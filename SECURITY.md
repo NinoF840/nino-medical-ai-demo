@@ -15,7 +15,7 @@ If you discover a security vulnerability, please report it responsibly:
 
 1. **DO NOT** create a public GitHub issue
 2. **DO NOT** disclose the vulnerability publicly until it has been addressed
-3. **DO** email us at security@nino-medical-ai-demo.org with details
+3. **DO** email us at nino58150@gmail.com with details
 
 ### What to include in your report:
 - Description of the vulnerability
@@ -50,4 +50,4 @@ This software is provided for educational and research purposes only. It should 
 
 ## Contact
 
-For security-related inquiries, contact: security@nino-medical-ai-demo.org
+For security-related inquiries, contact: nino58150@gmail.com
