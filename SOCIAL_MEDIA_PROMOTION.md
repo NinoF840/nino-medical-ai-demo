@@ -3,7 +3,8 @@
 ## 🐦 Twitter/X Templates
 
 ### Template 1: Launch Announcement
-```
+
+```text
 🚀 Excited to launch Nino Medical AI Demo - an open-source educational platform for healthcare AI! 
 
 🏥 Perfect for medical professionals learning AI
@@ -17,7 +18,8 @@
 ```
 
 ### Template 2: Contributor Call
-```
+
+```text
 📢 Calling all #MedicalAI enthusiasts! 
 
 Our open-source project needs YOUR expertise:
@@ -32,7 +34,8 @@ Join us: https://github.com/NinoF840/nino-medical-ai-demo
 ```
 
 ### Template 3: Feature Highlight
-```
+
+```text
 ✨ Why contribute to our Medical AI Demo?
 
 🎓 Learn cutting-edge medical AI concepts
@@ -50,7 +53,8 @@ All with synthetic data - fully compliant & ethical!
 ## 💼 LinkedIn Templates
 
 ### Template 1: Professional Network Post
-```
+
+```text
 🏥 Bridging Healthcare and AI: Open Source Initiative
 
 I'm excited to share the launch of the Nino Medical AI Demo, an open-source educational platform designed to advance healthcare AI knowledge and research.
@@ -78,7 +82,8 @@ Link: https://github.com/NinoF840/nino-medical-ai-demo
 ```
 
 ### Template 2: Technical Focus
-```
+
+```text
 🤖 Open Source Medical AI: Built for Education & Research
 
 Just launched a comprehensive medical AI demonstration platform that combines:
@@ -108,7 +113,8 @@ https://github.com/NinoF840/nino-medical-ai-demo
 ## 🧡 Reddit Templates
 
 ### r/MachineLearning
-```
+
+```text
 [P] Open Source Medical AI Demo - Educational Platform for Healthcare AI
 
 Hey ML community! 👋
@@ -142,7 +148,8 @@ Would love feedback from the community! What other medical AI educational tools 
 ```
 
 ### r/Python
-```
+
+```text
 [Project] Medical AI Demo built with Streamlit - Open Source & Looking for Contributors
 
 Hi Python community! 
@@ -177,7 +184,8 @@ Any Streamlit experts want to help make the interface even better? Also open to 
 ```
 
 ### r/HealthTech
-```
+
+```text
 Open Source Medical AI Education Platform - Join Our Community!
 
 Hi HealthTech community! 👋
@@ -225,7 +233,7 @@ What other educational tools would help bridge the gap between healthcare and AI
 - Reddit: Use subreddit-appropriate tags
 
 ### Engagement Strategy
-1. **Post timing:** 
+1. **Post timing:**
    - Twitter: 9 AM, 1 PM, 5 PM EST
    - LinkedIn: 8 AM, 12 PM, 5 PM EST
    - Reddit: Check subreddit peak times

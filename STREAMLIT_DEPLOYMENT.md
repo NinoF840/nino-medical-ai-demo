@@ -12,7 +12,7 @@
 ## 🌐 **Deploy to Streamlit Cloud (FREE)**
 
 ### **Step 1: Visit Streamlit Cloud**
-1. Go to: https://share.streamlit.io/
+1. Go to: <https://share.streamlit.io/>
 2. Sign in with your GitHub account (@NinoF840)
 
 ### **Step 2: Deploy Your App**
@@ -22,7 +22,8 @@
 4. Click "**Deploy!**"
 
 ### **Step 3: Your App Will Be Live At:**
-```
+
+```text
 https://nino-medical-ai-demo.streamlit.app/
 ```
 *(or similar URL assigned by Streamlit)*
@@ -103,6 +104,6 @@ Once deployed, you'll have:
 
 ---
 
-**🚀 Ready to deploy? Visit https://share.streamlit.io/ and follow the steps above!**
+**🚀 Ready to deploy? Visit <https://share.streamlit.io/> and follow the steps above!**
 
 **Your enhanced app is now ready for the world!**

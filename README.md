@@ -14,7 +14,7 @@ This software is **NOT FOR CLINICAL OR DIAGNOSTIC USE**. It is designed for educ
 
 ## 📋 Overview
 
-Welcome to the Nino Medical AI Demo! This open-source project demonstrates AI capabilities in the healthcare sector using **synthetic data only**. 
+Welcome to the Nino Medical AI Demo! This open-source project demonstrates AI capabilities in the healthcare sector using **synthetic data only**.
 
 ### 🎯 Purpose
 - Educational tool for medical AI concepts
