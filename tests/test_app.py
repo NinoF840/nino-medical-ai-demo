@@ -1,8 +1,9 @@
 """Unit tests for the medical AI application."""
 
-import pytest
-import sys
 import os
+import sys
+
+import pytest
 
 # Add the parent directory to the path so we can import app
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

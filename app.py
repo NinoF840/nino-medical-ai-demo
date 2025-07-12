@@ -1,6 +1,6 @@
 # Nino Medical AI Demo - Open Source Platform
-import streamlit as st
 import pandas as pd
+import streamlit as st
 
 # Page configuration
 st.set_page_config(
