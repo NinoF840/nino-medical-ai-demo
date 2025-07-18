@@ -1,0 +1,36 @@
+# Build directories
+build/
+dist/
+*.spec
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Streamlit logs
+streamlit_*.log
+streamlit_*.txt
+
+# Large executables
+*.exe
+vs_buildtools.exe
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+
+# Virtual environment
+venv/
+env/

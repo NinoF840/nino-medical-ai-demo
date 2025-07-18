@@ -1,0 +1,57 @@
+{
+  "sessions": [
+    {
+      "timestamp": "2025-07-14T09:35:03.303761",
+      "user_id": "anonymous",
+      "session_id": "dc29ee2d-46ae-4491-a3ae-99a585771cc2",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"
+    },
+    {
+      "timestamp": "2025-07-16T22:06:24.200479",
+      "user_id": "anonymous",
+      "session_id": "118aa0c9-1f41-4979-a25e-9696491dbf0b",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"
+    },
+    {
+      "timestamp": "2025-07-17T01:10:59.118058",
+      "user_id": "anonymous",
+      "session_id": "ecd6221b-8d5f-452b-b8cc-ad37c3a01a9e",
+      "user_agent": "unknown"
+    },
+    {
+      "timestamp": "2025-07-19T00:51:32.733477",
+      "user_id": "anonymous",
+      "session_id": "6df112a3-8832-4ee7-ab17-aecb66706ab3",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"
+    },
+    {
+      "timestamp": "2025-07-19T01:02:06.649602",
+      "user_id": "anonymous",
+      "session_id": "3289c6d3-9fd6-48c1-a2ed-c10f3a3c5914",
+      "user_agent": "unknown"
+    },
+    {
+      "timestamp": "2025-07-19T01:11:10.708427",
+      "user_id": "anonymous",
+      "session_id": "58652f8f-6ca2-4196-82f2-f9aff733387d",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"
+    },
+    {
+      "timestamp": "2025-07-19T01:14:51.720727",
+      "user_id": "anonymous",
+      "session_id": "c7ee8345-9ee0-44d7-aa5b-f8feb5b6d152",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"
+    },
+    {
+      "timestamp": "2025-07-19T01:17:09.212298",
+      "user_id": "anonymous",
+      "session_id": "b7e3b7f1-b9d6-44ab-892a-cdd8baad1653",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"
+    }
+  ],
+  "features": {
+    "model_training_process": 5,
+    "clustering_analysis": 5,
+    "ml_code_examples": 4
+  }
+}

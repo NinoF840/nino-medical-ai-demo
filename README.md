@@ -24,11 +24,12 @@ Welcome to the Nino Medical AI Demo! This open-source project demonstrates AI ca
 
 ## ✨ Key Features
 - **🔬 Synthetic Data**: Uses only synthetic data; no real patient information
-- **🤖 AI Simulation**: Basic AI analysis for educational purposes
-- **📊 Data Visualization**: Interactive medical data display
+- **🤖 Machine Learning**: Risk prediction using Random Forest classifier
+- **📊 Data Analysis**: Patient clustering with K-Means algorithm
+- **📈 Visualizations**: Interactive charts and correlation matrices
 - **✅ Compliance**: AI Act and GDPR compliant
-- **🧪 Testing**: Comprehensive test suite with 100% coverage
-- **📚 Documentation**: Extensive documentation and guides
+- **🧪 Testing**: Comprehensive test suite including ML components
+- **📚 Documentation**: Extensive documentation and ML code examples
 
 ## Installation
 
@@ -70,11 +71,12 @@ streamlit run app.py
 4. Fork, code, and submit your PR!
 
 ### 🎯 Areas We Need Help With
-- 📊 **Data Science**: Expanding synthetic medical datasets
-- 🎨 **UI/UX**: Improving Streamlit interface
-- 🧪 **Testing**: Adding comprehensive test coverage
-- 📚 **Documentation**: Writing tutorials and guides
-- 🔒 **Security**: AI safety and compliance
+- 📊 **Data Science**: Expanding synthetic medical datasets and ML models
+- 🤖 **Machine Learning**: Adding new algorithms and model evaluation
+- 🎨 **UI/UX**: Improving Streamlit interface and ML visualizations
+- 🧪 **Testing**: Adding comprehensive test coverage for ML components
+- 📚 **Documentation**: Writing tutorials for medical AI and ML guides
+- 🔒 **Security**: AI safety, model validation, and compliance
 - 🌍 **Internationalization**: Multi-language support
 
 ### 💡 Why Contribute?
@@ -93,6 +95,16 @@ Thanks to all our amazing contributors! ❤️
 <a href="https://github.com/NinoF840/nino-medical-ai-demo/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=NinoF840/nino-medical-ai-demo" />
 </a>
+
+## 🏛️ AI Governance & Responsibility
+
+This project is committed to responsible AI development and governance:
+
+- 📋 **Policy Engagement**: [AI Policy Consultation Template](AI_Policy_Consultation_Template.md)
+- 🛡️ **Ethics Board**: [Advisory Ethics Board](Advisory_Ethics_Board.md)
+- 📊 **Impact Metrics**: [Impact Metrics Framework](Impact_Metrics_Framework.md)
+- 📜 **ISO Standards**: [ISO AI Standards Reference](ISO_AI_Standards_Reference.md)
+- 🎯 **Action Plan**: [Enhancement Action Plan](Enhancement_Action_Plan.md)
 
 ## 📞 Get in Touch
 
