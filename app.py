@@ -293,7 +293,7 @@ with st.sidebar:
     # Analytics Dashboard Access
     st.header("📊 Analytics")
     if st.button("🔍 View Analytics Dashboard", use_container_width=True):
-        st.switch_page("visitor_dashboard.py")
+        st.switch_page("pages/visitor_dashboard.py")
     
     # Show quick analytics summary
     summary = st.session_state.analytics_tracker.get_analytics_summary()
