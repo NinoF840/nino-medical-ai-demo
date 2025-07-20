@@ -113,4 +113,6 @@ This project is committed to responsible AI development and governance:
 - 🤝 **Want to contribute?** Check our [good first issues](https://github.com/NinoF840/nino-medical-ai-demo/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 
 ## License
-MIT License - see `LICENSE.txt` for details.
+MIT License -Antonino Piacenza
+
+
