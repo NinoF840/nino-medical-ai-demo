@@ -11,6 +11,7 @@ from sklearn.preprocessing import StandardScaler
 # Import analytics and feedback systems
 from analytics_tracker import AnalyticsTracker
 from feedback_collector import FeedbackCollector
+from google_analytics_integration import add_google_analytics, track_event, setup_enhanced_tracking
 
 # Page configuration
 st.set_page_config(
@@ -19,6 +20,15 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+# Initialize Google Analytics (replace with your actual tracking ID)
+# For production, replace 'G-DEMO123456789' with your actual GA4 tracking ID
+try:
+    add_google_analytics('G-DEMO123456789', debug=True)  # Set debug=False for production
+    setup_enhanced_tracking()
+except Exception as e:
+    # Silently handle GA errors to prevent app crashes
+    pass
 
 # Initialize analytics and feedback systems
 if 'analytics_tracker' not in st.session_state:
@@ -146,6 +156,13 @@ st.info(
 with st.expander("🔍 View Model Training Process"):
     # Track feature usage
     st.session_state.analytics_tracker.track_feature_usage("model_training_process")
+    # Google Analytics tracking
+    try:
+        track_event('model_training_viewed', 
+                   event_category='ML_Features',
+                   event_label='Random Forest Training')
+    except:
+        pass
     # Prepare features for ML
     X = df[numeric_cols]
     y = df["Risk_Category"]
@@ -253,6 +270,13 @@ st.subheader("🔍 Patient Clustering Analysis")
 with st.expander("📏 View Clustering Results"):
     # Track feature usage
     st.session_state.analytics_tracker.track_feature_usage("clustering_analysis")
+    # Google Analytics tracking
+    try:
+        track_event('clustering_analysis_viewed',
+                   event_category='ML_Features', 
+                   event_label='K-Means Patient Clustering')
+    except:
+        pass
     # Perform K-means clustering
     X_cluster = df[numeric_cols]
     scaler_cluster = StandardScaler()
@@ -339,6 +363,13 @@ st.write("Learn about medical AI concepts and machine learning implementations."
 with st.expander("💻 View ML Code Examples"):
     # Track feature usage
     st.session_state.analytics_tracker.track_feature_usage("ml_code_examples")
+    # Google Analytics tracking
+    try:
+        track_event('code_examples_viewed',
+                   event_category='Educational',
+                   event_label='ML Code Examples')
+    except:
+        pass
     st.write("**Example 1: Medical AI with Class Weights (Recommended)**")
     st.code(
         """

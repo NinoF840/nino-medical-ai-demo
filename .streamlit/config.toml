@@ -7,6 +7,9 @@ textColor = "#262730"
 [server]
 headless = true
 port = 8501
+runOnSave = true
+fileWatcherType = "auto"
+maxUploadSize = 200
 
 [browser]
 gatherUsageStats = false
