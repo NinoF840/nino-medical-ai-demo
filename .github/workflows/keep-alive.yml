@@ -1,0 +1,22 @@
+name: Keep Streamlit App Alive
+
+on:
+  schedule:
+    # Ping ogni 6 giorni alle 10:00 UTC
+    - cron: '0 10 */6 * *'
+  workflow_dispatch: # Permette di eseguire manualmente
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Ping Streamlit App
+      run: |
+        # Sostituisci con il tuo URL effettivo quando lo trovi
+        curl -I https://nino-medical-ai-demo.streamlit.app || echo "App may be starting up"
+        sleep 30
+        curl -I https://nino-medical-ai-demo.streamlit.app || echo "App startup complete"
+    
+    - name: Log Success
+      run: echo "App pinged successfully at $(date)"
