@@ -11,6 +11,7 @@ from sklearn.preprocessing import StandardScaler
 # Import analytics and feedback systems
 from analytics_tracker import AnalyticsTracker
 from feedback_collector import FeedbackCollector
+from enhanced_feedback_collector import EnhancedFeedbackCollector
 from google_analytics_integration import add_google_analytics, track_event, setup_enhanced_tracking
 
 # Page configuration
@@ -33,8 +34,8 @@ except Exception as e:
 # Initialize analytics and feedback systems
 if 'analytics_tracker' not in st.session_state:
     st.session_state.analytics_tracker = AnalyticsTracker()
-if 'feedback_collector' not in st.session_state:
-    st.session_state.feedback_collector = FeedbackCollector()
+if 'enhanced_feedback_collector' not in st.session_state:
+    st.session_state.enhanced_feedback_collector = EnhancedFeedbackCollector()
 
 # Title and header
 st.title("🏥 Nino Medical AI Demo")
@@ -316,8 +317,13 @@ with st.sidebar:
     
     # Analytics Dashboard Access
     st.header("📊 Analytics")
-    if st.button("🔍 View Analytics Dashboard", use_container_width=True):
-        st.switch_page("pages/visitor_dashboard.py")
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("📈 Visitor Analytics", use_container_width=True):
+            st.switch_page("pages/visitor_dashboard.py")
+    with col2:
+        if st.button("📝 Feedback Dashboard", use_container_width=True):
+            st.switch_page("pages/feedback_dashboard.py")
     
     # Show quick analytics summary
     summary = st.session_state.analytics_tracker.get_analytics_summary()
@@ -325,8 +331,8 @@ with st.sidebar:
     st.metric("Unique Users", summary['unique_users'])
     st.metric("Last 30 Days", summary['last_30_days'])
     
-    # Add feedback collection
-    st.session_state.feedback_collector.collect_user_feedback()
+    # Add enhanced feedback collection
+    st.session_state.enhanced_feedback_collector.collect_user_feedback()
 
     st.header("🤖 ML Features")
     st.write(

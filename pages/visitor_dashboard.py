@@ -48,8 +48,8 @@ def create_visitor_dashboard():
             st.switch_page("app.py")
     
     with col3:
-        if st.button("🔄 Refresh Data", use_container_width=True):
-            st.rerun()
+        if st.button("📝 Feedback Dashboard", use_container_width=True):
+            st.switch_page("pages/feedback_dashboard.py")
     
     st.markdown("---")
     

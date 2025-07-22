@@ -89,11 +89,17 @@
       "user_id": "anonymous",
       "session_id": "7a261634-6395-4265-be65-8fe4a7174ce2",
       "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"
+    },
+    {
+      "timestamp": "2025-07-22T00:37:07.692559",
+      "user_id": "anonymous",
+      "session_id": "6b0bfc55-1bb1-4951-bbbb-f9ecd77c41a9",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0"
     }
   ],
   "features": {
-    "model_training_process": 14,
-    "clustering_analysis": 14,
-    "ml_code_examples": 11
+    "model_training_process": 20,
+    "clustering_analysis": 20,
+    "ml_code_examples": 17
   }
 }
