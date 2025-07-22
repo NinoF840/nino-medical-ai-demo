@@ -8,11 +8,8 @@ from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-# Import analytics and feedback systems
-from analytics_tracker import AnalyticsTracker
-from feedback_collector import FeedbackCollector
-from enhanced_feedback_collector import EnhancedFeedbackCollector
-from google_analytics_integration import add_google_analytics, track_event, setup_enhanced_tracking
+# Import analytics and feedback systems (lazy loading)
+import importlib
 
 # Page configuration
 st.set_page_config(
@@ -22,20 +19,53 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# Initialize Google Analytics (replace with your actual tracking ID)
-# For production, replace 'G-DEMO123456789' with your actual GA4 tracking ID
-try:
-    add_google_analytics('G-DEMO123456789', debug=True)  # Set debug=False for production
-    setup_enhanced_tracking()
-except Exception as e:
-    # Silently handle GA errors to prevent app crashes
-    pass
+# Lazy loading functions for analytics
+@st.cache_resource
+def get_analytics_tracker():
+    """Lazy load analytics tracker"""
+    try:
+        analytics_module = importlib.import_module('analytics_tracker')
+        return analytics_module.AnalyticsTracker()
+    except ImportError:
+        return None
 
-# Initialize analytics and feedback systems
+@st.cache_resource 
+def get_enhanced_feedback_collector():
+    """Lazy load enhanced feedback collector"""
+    try:
+        feedback_module = importlib.import_module('enhanced_feedback_collector')
+        return feedback_module.EnhancedFeedbackCollector()
+    except ImportError:
+        return None
+
+@st.cache_resource
+def setup_google_analytics():
+    """Lazy load Google Analytics setup"""
+    try:
+        ga_module = importlib.import_module('google_analytics_integration')
+        ga_module.add_google_analytics('G-DEMO123456789', debug=True)
+        ga_module.setup_enhanced_tracking()
+        return ga_module
+    except Exception as e:
+        return None
+
+def track_event_safe(event_name, **kwargs):
+    """Safe event tracking with lazy loading"""
+    try:
+        ga_module = setup_google_analytics()
+        if ga_module:
+            ga_module.track_event(event_name, **kwargs)
+    except:
+        pass
+
+# Initialize systems only when needed
 if 'analytics_tracker' not in st.session_state:
-    st.session_state.analytics_tracker = AnalyticsTracker()
+    st.session_state.analytics_tracker = get_analytics_tracker()
 if 'enhanced_feedback_collector' not in st.session_state:
-    st.session_state.enhanced_feedback_collector = EnhancedFeedbackCollector()
+    st.session_state.enhanced_feedback_collector = get_enhanced_feedback_collector()
+
+# Initialize GA in background
+setup_google_analytics()
 
 # Title and header
 st.title("🏥 Nino Medical AI Demo")
@@ -155,15 +185,13 @@ st.info(
 )
 
 with st.expander("🔍 View Model Training Process"):
-    # Track feature usage
-    st.session_state.analytics_tracker.track_feature_usage("model_training_process")
-    # Google Analytics tracking
-    try:
-        track_event('model_training_viewed', 
-                   event_category='ML_Features',
-                   event_label='Random Forest Training')
-    except:
-        pass
+    # Track feature usage (safe)
+    if st.session_state.analytics_tracker:
+        st.session_state.analytics_tracker.track_feature_usage("model_training_process")
+    # Google Analytics tracking (safe)
+    track_event_safe('model_training_viewed', 
+                    event_category='ML_Features',
+                    event_label='Random Forest Training')
     # Prepare features for ML
     X = df[numeric_cols]
     y = df["Risk_Category"]
@@ -269,15 +297,13 @@ with st.expander("🔍 View Model Training Process"):
 # Clustering Analysis
 st.subheader("🔍 Patient Clustering Analysis")
 with st.expander("📏 View Clustering Results"):
-    # Track feature usage
-    st.session_state.analytics_tracker.track_feature_usage("clustering_analysis")
-    # Google Analytics tracking
-    try:
-        track_event('clustering_analysis_viewed',
-                   event_category='ML_Features', 
-                   event_label='K-Means Patient Clustering')
-    except:
-        pass
+    # Track feature usage (safe)
+    if st.session_state.analytics_tracker:
+        st.session_state.analytics_tracker.track_feature_usage("clustering_analysis")
+    # Google Analytics tracking (safe)
+    track_event_safe('clustering_analysis_viewed',
+                    event_category='ML_Features', 
+                    event_label='K-Means Patient Clustering')
     # Perform K-means clustering
     X_cluster = df[numeric_cols]
     scaler_cluster = StandardScaler()
@@ -325,14 +351,20 @@ with st.sidebar:
         if st.button("📝 Feedback Dashboard", use_container_width=True):
             st.switch_page("pages/feedback_dashboard.py")
     
-    # Show quick analytics summary
-    summary = st.session_state.analytics_tracker.get_analytics_summary()
-    st.metric("Total Sessions", summary['total_sessions'])
-    st.metric("Unique Users", summary['unique_users'])
-    st.metric("Last 30 Days", summary['last_30_days'])
+    # Show quick analytics summary (safe)
+    if st.session_state.analytics_tracker:
+        summary = st.session_state.analytics_tracker.get_analytics_summary()
+        st.metric("Total Sessions", summary['total_sessions'])
+        st.metric("Unique Users", summary['unique_users'])
+        st.metric("Last 30 Days", summary['last_30_days'])
+    else:
+        st.metric("Total Sessions", "--")
+        st.metric("Unique Users", "--")
+        st.metric("Last 30 Days", "--")
     
-    # Add enhanced feedback collection
-    st.session_state.enhanced_feedback_collector.collect_user_feedback()
+    # Add enhanced feedback collection (safe)
+    if st.session_state.enhanced_feedback_collector:
+        st.session_state.enhanced_feedback_collector.collect_user_feedback()
 
     st.header("🤖 ML Features")
     st.write(
@@ -367,15 +399,13 @@ st.subheader("📚 Educational Resources")
 st.write("Learn about medical AI concepts and machine learning implementations.")
 
 with st.expander("💻 View ML Code Examples"):
-    # Track feature usage
-    st.session_state.analytics_tracker.track_feature_usage("ml_code_examples")
-    # Google Analytics tracking
-    try:
-        track_event('code_examples_viewed',
-                   event_category='Educational',
-                   event_label='ML Code Examples')
-    except:
-        pass
+    # Track feature usage (safe)
+    if st.session_state.analytics_tracker:
+        st.session_state.analytics_tracker.track_feature_usage("ml_code_examples")
+    # Google Analytics tracking (safe)
+    track_event_safe('code_examples_viewed',
+                    event_category='Educational',
+                    event_label='ML Code Examples')
     st.write("**Example 1: Medical AI with Class Weights (Recommended)**")
     st.code(
         """

@@ -1,47 +1,69 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
+@st.cache_resource
 def add_google_analytics(tracking_id, debug=False):
     """
-    Add Google Analytics 4 to Streamlit app
+    Add Google Analytics 4 to Streamlit app with optimized loading
     
     Args:
         tracking_id (str): Your Google Analytics tracking ID (e.g., 'G-XXXXXXXXXX')
         debug (bool): Enable debug mode for testing
     """
     
-    # Google Analytics 4 tracking code
+    # Optimized Google Analytics 4 tracking code with deferred loading
     ga_code = f"""
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={tracking_id}"></script>
+    <!-- Optimized Google tag (gtag.js) -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){{dataLayer.push(arguments);}}
-      gtag('js', new Date());
+      // Initialize GA asynchronously to avoid blocking
+      (function() {{
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id={tracking_id}';
+        script.onload = function() {{
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){{dataLayer.push(arguments);}}
+          gtag('js', new Date());
 
-      gtag('config', '{tracking_id}', {{
-        'debug_mode': {str(debug).lower()},
-        'send_page_view': true,
-        'anonymize_ip': true,
-        'allow_google_signals': false,
-        'allow_ad_personalization_signals': false
-      }});
+          gtag('config', '{tracking_id}', {{
+            'debug_mode': {str(debug).lower()},
+            'send_page_view': true,
+            'anonymize_ip': true,
+            'allow_google_signals': false,
+            'allow_ad_personalization_signals': false,
+            'transport_type': 'beacon'  // Optimize for performance
+          }});
+          
+          // Track custom events with error handling
+          window.trackEvent = function(event_name, parameters = {{}}) {{
+            try {{
+              gtag('event', event_name, parameters);
+              {f"console.log('GA Event:', event_name, parameters);" if debug else ""}
+            }} catch(e) {{
+              {f"console.error('GA Error:', e);" if debug else ""}
+            }}
+          }};
+          
+          {f"console.log('Google Analytics loaded with ID: {tracking_id}');" if debug else ""}
+        }};
+        document.head.appendChild(script);
+      }})();
       
-      // Track custom events
-      function trackEvent(event_name, parameters = {{}}) {{
-        gtag('event', event_name, parameters);
-        {f"console.log('GA Event:', event_name, parameters);" if debug else ""}
-      }}
-      
-      // Make trackEvent available globally
-      window.trackEvent = trackEvent;
-      
-      {f"console.log('Google Analytics initialized with ID: {tracking_id}');" if debug else ""}
+      // Fallback trackEvent for when GA is not loaded
+      window.trackEvent = window.trackEvent || function() {{
+        {f"console.log('GA not loaded, event skipped:', arguments);" if debug else ""}
+      }};
     </script>
     """
     
-    # Inject the Google Analytics code
-    components.html(ga_code, height=0)
+    # Inject the Google Analytics code with minimal height
+    try:
+        components.html(ga_code, height=0)
+        return True
+    except Exception as e:
+        if debug:
+            st.warning(f"GA initialization failed: {e}")
+        return False
 
 def track_event(event_name, **parameters):
     """
